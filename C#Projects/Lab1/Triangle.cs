@@ -66,12 +66,10 @@ namespace Lab1
             double semiperimeter = (side1 + side2 + side3) / 2;
             return Math.Sqrt(semiperimeter * (semiperimeter - side1) * (semiperimeter - side2) * (semiperimeter - side3));
         }
-        public string calculate_centroid()
+        public double calculate_inner_circle_radius()
         {
-            double x = 0.0;
-            double y = 0.0;
-            string centroid = "(" + Convert.ToString(x) + ", " + Convert.ToString(y) + ")";
-            return centroid;
+            double semiperimeter = (side1 + side2 + side3) / 2;
+            return calculate_area() / semiperimeter;
         }
         ~Triangle()
         {
