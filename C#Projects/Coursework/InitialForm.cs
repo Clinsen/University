@@ -21,7 +21,8 @@ namespace Coursework
 
         private void create_list_btn_Click(object sender, EventArgs e)
         {
-
+            ListForm form = new ListForm();
+            form.Show();
         }
     }
 }
