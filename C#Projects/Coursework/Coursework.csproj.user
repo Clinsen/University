@@ -10,6 +10,9 @@
     <Compile Update="ListForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="MatrixForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="RealForm.cs">
       <SubType>Form</SubType>
     </Compile>

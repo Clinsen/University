@@ -24,5 +24,16 @@ namespace Coursework
             ListForm form = new ListForm();
             form.Show();
         }
+
+        private void create_matrix_btn_Click(object sender, EventArgs e)
+        {
+            MatrixForm form = new MatrixForm();
+            form.Show();
+        }
+
+        private void show_faq_btn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Developed by Kyshynskyi Oleksandr (CSA-11)", "FAQ"); // Computer Science Abbrevated - Комп'ютерні Науки Скорочено (термін навчання)
+        }
     }
 }

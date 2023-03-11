@@ -101,6 +101,7 @@
             Controls.Add(listbox);
             Controls.Add(addBtn);
             Controls.Add(inputTxt);
+            MaximizeBox = false;
             Name = "ListForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Create a list";

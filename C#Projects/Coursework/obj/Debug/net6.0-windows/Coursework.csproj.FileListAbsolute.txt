@@ -37,3 +37,4 @@ C:\Users\Clinsen\University\C#Projects\Coursework\obj\Debug\net6.0-windows\Cours
 C:\Users\Clinsen\University\C#Projects\Coursework\obj\Debug\net6.0-windows\Coursework.genruntimeconfig.cache
 C:\Users\Clinsen\University\C#Projects\Coursework\obj\Debug\net6.0-windows\ref\Coursework.dll
 C:\Users\Clinsen\University\C#Projects\Coursework\obj\Debug\net6.0-windows\Coursework.ListForm.resources
+C:\Users\Clinsen\University\C#Projects\Coursework\obj\Debug\net6.0-windows\Coursework.MatrixForm.resources
