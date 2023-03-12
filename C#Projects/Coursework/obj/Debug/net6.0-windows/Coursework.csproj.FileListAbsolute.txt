@@ -38,3 +38,7 @@ C:\Users\Clinsen\University\C#Projects\Coursework\obj\Debug\net6.0-windows\Cours
 C:\Users\Clinsen\University\C#Projects\Coursework\obj\Debug\net6.0-windows\ref\Coursework.dll
 C:\Users\Clinsen\University\C#Projects\Coursework\obj\Debug\net6.0-windows\Coursework.ListForm.resources
 C:\Users\Clinsen\University\C#Projects\Coursework\obj\Debug\net6.0-windows\Coursework.MatrixForm.resources
+C:\Users\Clinsen\University\C#Projects\Coursework\obj\Debug\net6.0-windows\Coursework.ObjectListForm.resources
+C:\Users\Clinsen\University\C#Projects\Coursework\obj\Debug\net6.0-windows\Coursework.CreateForm.resources
+C:\Users\Clinsen\University\C#Projects\Coursework\obj\Debug\net6.0-windows\Coursework.CreateComplexForm.resources
+C:\Users\Clinsen\University\C#Projects\Coursework\obj\Debug\net6.0-windows\Coursework.CreateRealForm.resources

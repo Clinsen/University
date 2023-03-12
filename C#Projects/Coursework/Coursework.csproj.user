@@ -4,6 +4,15 @@
     <Compile Update="ComplexForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="CreateComplexForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CreateRealForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="InitialForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -11,6 +20,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="MatrixForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ObjectListForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="RealForm.cs">

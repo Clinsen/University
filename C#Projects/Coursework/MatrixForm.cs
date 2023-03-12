@@ -62,6 +62,7 @@ namespace Coursework
             this.matrixDataGrid.Rows.Clear();
             this.matrixDataGrid.Columns.Clear();
             resultLbl.Text = "Largest absolute value of the number in your matrix:";
+            abs_value = 0;
         }
     }
 }

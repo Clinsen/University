@@ -27,7 +27,7 @@ namespace Coursework
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(ex.ToString(), "Something went wrong...");
             }
         }
     }

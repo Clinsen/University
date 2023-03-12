@@ -35,5 +35,11 @@ namespace Coursework
         {
             MessageBox.Show("Developed by Kyshynskyi Oleksandr (CSA-11)", "FAQ"); // Computer Science Abbrevated - Комп'ютерні Науки Скорочено (термін навчання)
         }
+
+        private void create_obj_list_btn_Click(object sender, EventArgs e)
+        {
+            ObjectListForm form = new ObjectListForm();
+            form.Show();
+        }
     }
 }
