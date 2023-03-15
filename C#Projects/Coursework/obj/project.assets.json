@@ -8,23 +8,23 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Clinsen\\.nuget\\packages\\": {},
-    "D:\\Program Files\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\En Route\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Clinsen\\University\\C#Projects\\Coursework\\Coursework.csproj",
+      "projectUniqueName": "C:\\Users\\En Route\\University\\C#Projects\\Coursework\\Coursework.csproj",
       "projectName": "Coursework",
-      "projectPath": "C:\\Users\\Clinsen\\University\\C#Projects\\Coursework\\Coursework.csproj",
-      "packagesPath": "C:\\Users\\Clinsen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Clinsen\\University\\C#Projects\\Coursework\\obj\\",
+      "projectPath": "C:\\Users\\En Route\\University\\C#Projects\\Coursework\\Coursework.csproj",
+      "packagesPath": "C:\\Users\\En Route\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\En Route\\University\\C#Projects\\Coursework\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\Program Files\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Clinsen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\En Route\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -69,7 +69,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }

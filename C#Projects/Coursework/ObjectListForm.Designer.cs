@@ -28,25 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            listbox = new ListBox();
+            listboxobj = new ListBox();
             createBtn = new Button();
             clearBtn = new Button();
             SuspendLayout();
             // 
-            // listbox
+            // listboxobj
             // 
-            listbox.FormattingEnabled = true;
-            listbox.ItemHeight = 15;
-            listbox.Location = new Point(12, 130);
-            listbox.Name = "listbox";
-            listbox.Size = new Size(207, 184);
-            listbox.TabIndex = 3;
+            listboxobj.FormattingEnabled = true;
+            listboxobj.ItemHeight = 25;
+            listboxobj.Location = new Point(17, 217);
+            listboxobj.Margin = new Padding(4, 5, 4, 5);
+            listboxobj.Name = "listboxobj";
+            listboxobj.Size = new Size(294, 304);
+            listboxobj.TabIndex = 3;
             // 
             // createBtn
             // 
-            createBtn.Location = new Point(12, 12);
+            createBtn.Location = new Point(17, 20);
+            createBtn.Margin = new Padding(4, 5, 4, 5);
             createBtn.Name = "createBtn";
-            createBtn.Size = new Size(207, 83);
+            createBtn.Size = new Size(296, 138);
             createBtn.TabIndex = 4;
             createBtn.Text = "Create an object";
             createBtn.UseVisualStyleBackColor = true;
@@ -54,32 +56,36 @@
             // 
             // clearBtn
             // 
-            clearBtn.Location = new Point(12, 101);
+            clearBtn.Location = new Point(17, 168);
+            clearBtn.Margin = new Padding(4, 5, 4, 5);
             clearBtn.Name = "clearBtn";
-            clearBtn.Size = new Size(207, 23);
+            clearBtn.Size = new Size(296, 38);
             clearBtn.TabIndex = 5;
             clearBtn.Text = "Clear";
             clearBtn.UseVisualStyleBackColor = true;
+            clearBtn.Click += clearBtn_Click;
             // 
             // ObjectListForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(231, 340);
+            ClientSize = new Size(330, 567);
             Controls.Add(clearBtn);
             Controls.Add(createBtn);
-            Controls.Add(listbox);
+            Controls.Add(listboxobj);
+            Margin = new Padding(4, 5, 4, 5);
             MaximizeBox = false;
             Name = "ObjectListForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Object list";
+            Activated += ObjectListForm_Activated;
+            Load += ObjectListForm_Load;
             ResumeLayout(false);
         }
 
         #endregion
-
-        private ListBox listbox;
         private Button createBtn;
         private Button clearBtn;
+        private ListBox listboxobj;
     }
 }

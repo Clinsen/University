@@ -20,14 +20,14 @@ namespace Coursework
         private void realBtn_Click(object sender, EventArgs e)
         {
             CreateRealForm one = new CreateRealForm();
-            one.Show();
+            one.ShowDialog();
             this.Close();
         }
 
         private void complexBtn_Click(object sender, EventArgs e)
         {
             CreateComplexForm two = new CreateComplexForm();
-            two.Show();
+            two.ShowDialog();
             this.Close();
         }
     }

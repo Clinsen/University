@@ -16,10 +16,17 @@ namespace Coursework
         {
             InitializeComponent();
         }
-
         private void createBtn_Click(object sender, EventArgs e)
         {
-            RealNum num = new RealNum();
+            try
+            {
+                ObjectListForm yep = new ObjectListForm();
+                yep.receiveData(int.Parse(objValTxt.Text));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please carefully review the error message below:\n\n" + ex, "Something went wrong...");
+            }
             this.Close();
         }
     }

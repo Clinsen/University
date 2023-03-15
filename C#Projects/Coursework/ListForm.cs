@@ -49,7 +49,7 @@ namespace Coursework
 
         private void clearBtn_Click(object sender, EventArgs e)
         {
-            var confirmResult = MessageBox.Show("Do you really wanna clear your list?", "Confirm", MessageBoxButtons.YesNo);
+            var confirmResult = MessageBox.Show("Do you really want to clear your list?", "Confirm", MessageBoxButtons.YesNo);
             if (confirmResult == DialogResult.Yes)
             {
                 listbox.Items.Clear();
