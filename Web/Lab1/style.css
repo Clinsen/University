@@ -1,0 +1,40 @@
+body {
+  display: flex;
+  font-size: 15px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: rgb(203, 255, 255);
+}
+
+table,
+th,
+td {
+  border: 1.5px solid;
+  border-color: rgba(0, 0, 0, 0.4);
+  border-collapse: collapse;
+}
+
+th {
+  height: fit-content;
+}
+
+td {
+  width: fit-content;
+  text-align: left;
+}
+
+h3 {
+  padding-left: 20px;
+  font-size: 15px;
+  text-align: left;
+  color: rgb(230, 155, 45);
+}
+
+p {
+  text-align: left;
+  color: rgb(230, 155, 45);
+}
+
+li {
+  text-align: left;
+  color: rgb(230, 155, 45);
+}
