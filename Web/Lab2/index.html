@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laboratorna №2</title>
+  </head>
+  <body>
+    <form action="submits.html" method="GET">
+      <div style="padding-top: 10px">
+        <label for="full name">Full name:</label>
+        <input type="text" name="Full name" id="Full name" required />
+      </div>
+      <div style="padding-top: 25px">
+        <label for "district">Select the district you currently live in:</label>
+        <select name="District">
+            <option value="Halych">Halych district</option>
+            <option value="Railway">Railway district</option>
+            <option value="Lychakiv">Lychakiv district</option>
+            <option value="Sykhiv">Sykhiv district</option>
+            <option value="Franko">Franko district</option>
+            <option value="Shevchenko">Shevchenko district</option>
+        </select>
+      </div>
+      <div style="padding-top: 25px">
+        Select the language you want to take your tests in: 
+        <div>
+            <label for="Ukrainian">Ukrainian</label>
+            <input type="checkbox" id="Ukrainian" name="Ukrainian"><br>
+        </div>
+        <div>
+            <label for "English">English</label>
+            <input type="checkbox" id="English" name="English"><br>
+        </div> 
+        <div>
+            <label for "Polish">Polish</label>
+            <input type="checkbox" id="Polish" name="Polish"><br>
+        </div>
+        <div style="padding-top: 25px">
+            Tests you want to participate in: 
+            <div>
+                <label for="Ukrainian language">Ukrainian language</label>
+                <input type="checkbox" id="Ukrainian language" name="Ukrainian language"><br>
+            </div>
+            <div>
+                <label for "Physics">Physics</label>
+                <input type="checkbox" id="Physics" name="Physics"><br>
+            </div> 
+            <div>
+                <label for "Math">Math</label>
+                <input type="checkbox" id="Math" name="Math"><br>
+            </div>
+     <div style="padding-top: 15px">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+  </body>
+</html>
