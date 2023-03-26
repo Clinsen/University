@@ -35,9 +35,10 @@
 }
 
 .content-1 img {
-  width: 33%;
-  height: 100%;
+  width: 30%;
+  height: 97%;
   object-fit: cover;
+  padding: 10px;
 }
 
 .content-2 {
