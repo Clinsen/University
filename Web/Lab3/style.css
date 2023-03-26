@@ -1,0 +1,58 @@
+.container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows:
+    minmax(250px, auto)
+    minmax(500px, auto)
+    minmax(250px, auto);
+  grid-gap: 10px;
+}
+
+.grid-item {
+  background-color: cyan;
+  border: solid black 1px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  padding: 15px;
+  color: black;
+  cursor: move;
+}
+
+.header {
+  grid-column: 2 / 10;
+}
+
+.menu {
+  grid-row: 1;
+}
+
+.content-1 {
+  overflow: hidden;
+  box-sizing: border-box;
+  grid-row: 2 / -1;
+  grid-column: 1 / 10;
+}
+
+.content-1 img {
+  width: 33%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content-2 {
+  grid-row: 1 / -1;
+  grid-column: 10 / -1;
+}
+
+h3 {
+  text-align: center;
+}
+
+p {
+  text-align: justify;
+}
+
+a {
+  text-align: center;
+}
