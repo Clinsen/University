@@ -28,6 +28,14 @@ struct Relation
 		{	0, 0, 0, 0, 0	},
 		{	0, 0, 0, 0, 0	}
 	};
+	std::vector < std::vector<int> > result
+	{
+		{	0, 0, 0, 0, 0	},
+		{	0, 0, 0, 0, 0	},
+		{	0, 0, 0, 0, 0	},
+		{	0, 0, 0, 0, 0	},
+		{	0, 0, 0, 0, 0	}
+	};
 
 	Relation()
 	{
@@ -114,16 +122,19 @@ struct Relation
 		}
 	}
 
+	void clear_result()
+	{
+		for (unsigned int i = 0; i < 5; i++)
+		{
+			for (unsigned int j = 0; j < 5; j++)
+			{
+				result[i][j] = 0;
+			}
+		}
+	}
+
 	void compare_matrices()
 	{
-		std::vector < std::vector<int> > result
-		{
-			{	0, 0, 0, 0, 0	},
-			{	0, 0, 0, 0, 0	},
-			{	0, 0, 0, 0, 0	},
-			{	0, 0, 0, 0, 0	},
-			{	0, 0, 0, 0, 0	}
-		};
 		int switch_compare;
 		std::cout << "\n\n¬ар≥анти пор≥вн€нн€: "
 			<< "\n1. P та Q"
@@ -200,6 +211,116 @@ struct Relation
 				}
 			}
 		}
+
+		clear_result();
+
+		std::cout << "\n\nќперац≥€ перетину над матриц€ми P та Q:\n";
+		for (unsigned int i = 0; i < 5; i++)
+		{
+			for (unsigned int j = 0; j < 5; j++)
+			{
+				if (P[i][j] == Q[i][j])
+				{
+					result[i][j] = 1;
+				}
+				else
+				{
+					result[i][j] = 0;
+				}
+			}
+		}
+
+		for (unsigned int i = 0; i < 5; i++)
+		{
+			for (unsigned int j = 0; j < 5; j++)
+			{
+				std::cout << result[i][j] << " ";
+			}
+			std::cout << "\n";
+		}
+
+		clear_result();
+
+		std::cout << "\n\nќперац≥€ об'Їднанн€ над матриц€ми P та Q:\n";
+		for (unsigned int i = 0; i < 5; i++)
+		{
+			for (unsigned int j = 0; j < 5; j++)
+			{
+				if (P[i][j] == 1 || Q[i][j] == 1)
+				{
+					result[i][j] = 1;
+				}
+				else
+				{
+					result[i][j] = 0;
+				}
+			}
+		}
+
+		for (unsigned int i = 0; i < 5; i++)
+		{
+			for (unsigned int j = 0; j < 5; j++)
+			{
+				std::cout << result[i][j] << " ";
+			}
+			std::cout << "\n";
+		}
+
+		clear_result();
+
+		std::cout << "\n\nќперац≥€ р≥зниц≥ над матриц€ми P та Q:\n";
+		for (unsigned int i = 0; i < 5; i++)
+		{
+			for (unsigned int j = 0; j < 5; j++)
+			{
+				if (P[i][j] != 1 && Q[i][j] != 1)
+				{
+					result[i][j] = 1;
+				}
+				else
+				{
+					result[i][j] = 0;
+				}
+			}
+		}
+
+		for (unsigned int i = 0; i < 5; i++)
+		{
+			for (unsigned int j = 0; j < 5; j++)
+			{
+				std::cout << result[i][j] << " ";
+			}
+			std::cout << "\n";
+		}
+
+		clear_result();
+
+		std::cout << "\n\nќперац≥€ симетричноњ р≥зниц≥ над матриц€ми P та Q:\n";
+		for (unsigned int i = 0; i < 5; i++)
+		{
+			for (unsigned int j = 0; j < 5; j++)
+			{
+				if ((P[i][j] == 1 || Q[i][j] == 1) != (P[i][j] == Q[i][j]))
+				{
+					result[i][j] = 1;
+				}
+				else
+				{
+					result[i][j] = 0;
+				}
+			}
+		}
+		
+		for (unsigned int i = 0; i < 5; i++)
+		{
+			for (unsigned int j = 0; j < 5; j++)
+			{
+				std::cout << result[i][j] << " ";
+			}
+			std::cout << "\n";
+		}
+
+		clear_result();
 	}
 };
 
