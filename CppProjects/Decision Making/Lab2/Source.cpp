@@ -28,6 +28,14 @@ struct Relation
 		{	0, 0, 0, 0, 0	},
 		{	0, 0, 0, 0, 0	},
 	};
+	std::vector < std::vector<int> > result2
+	{
+		{	0, 0, 0, 0, 0	},
+		{	0, 0, 0, 0, 0	},
+		{	0, 0, 0, 0, 0	},
+		{	0, 0, 0, 0, 0	},
+		{	0, 0, 0, 0, 0	},
+	};
 
 	void check_relation_type()
 	{
@@ -179,9 +187,111 @@ struct Relation
 		}
 	}
 
-	void check_belongings()
+	bool check_for_tolerance()
 	{
+		std::cout << "\n\nCheck for tolerance: ";
+		for (unsigned int i = 0; i < 5; i++)
+		{
+			for (unsigned int j = 0; j < 5; j++)
+			{
+				if (P[i][j] == Q[i][j])
+				{
+					result[i][j] = 1;
+				}
+				else
+				{
+					result[i][j] = 0;
+				}
+			}
+		}
 
+		for (unsigned int i = 0; i < 5; i++)
+		{
+			for (unsigned int j = 0; j < 5; j++)
+			{
+				if (P[i][j] == result[i][j])
+				{
+					result2[i][j] = 1;
+				}
+				else
+				{
+					result2[i][j] = 0;
+				}
+			}
+		}
+
+		for (unsigned int i = 0; i < 5; i++)
+		{
+			for (unsigned int j = 0; j < 5; j++)
+			{
+				if (result[i][j] == result2[i][j])
+				{
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+			}
+		}
+		clear_result();
+	}
+
+	bool check_for_equality()
+	{
+		std::cout << "\nCheck for equality: ";
+		for (unsigned int i = 0; i < 5; i++)
+		{
+			for (unsigned int j = 0; j < 5; j++)
+			{
+				if (P[i][j] == Q[i][j] && (P[i][j] == 1 && Q[i][j] == 1) != (P[i][j] == Q[i][j]))
+				{
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+			}
+		}
+	}
+
+	bool check_for_quasorder()
+	{
+		std::cout << "\nCheck for quasorder: ";
+		for (unsigned int i = 0; i < 5; i++)
+		{
+			for (unsigned int j = 0; j < 5; j++)
+			{
+				if (Q[i][j] == P[i][j] && (Q[i][j] == 1) != (P[i][j] == Q[i][j]))
+				{
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+			}
+		}
+	}
+
+	bool check_for_linear_order()
+	{
+		std::cout << "\nCheck for linear order: ";
+		for (unsigned int i = 0; i < 5; i++)
+		{
+			for (unsigned int j = 0; j < 5; j++)
+			{
+				if (Q[i][j] == P[i][j] && (Q[i][j] == 1) != (P[i][j] == Q[i][j]) && (P[i][j] == 0 && Q[i][j] == 1))
+				{
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+			}
+		}
 	}
 
 	void find_accessibility()
@@ -197,6 +307,7 @@ struct Relation
 			for (unsigned int j = 0; j < 5; j++)
 			{
 				result[i][j] = 0;
+				result2[i][j] = 0;
 			}
 		}
 	}
@@ -222,4 +333,12 @@ int main()
 
 	Relation l2;
 	l2.check_relation_type();
+
+	std::cout << std::boolalpha;
+	std::cout << l2.check_for_tolerance();
+	std::cout << l2.check_for_equality();
+	std::cout << l2.check_for_quasorder();
+	std::cout << l2.check_for_linear_order() << "\n\n";
+
+	l2.find_accessibility();
 }
