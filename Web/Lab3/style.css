@@ -1,5 +1,6 @@
 .container {
   height: 100%;
+  text-overflow: ellipsis;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows:
