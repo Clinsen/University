@@ -100,6 +100,14 @@ void display()
 	glEnd();
 
 
+	// Update the angle variable
+	angle += 0.01;
+
+
+	// Trigger a redraw of the scene
+	glutPostRedisplay();
+
+
 	glutSwapBuffers();
 }
 
