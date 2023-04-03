@@ -42,7 +42,7 @@ void display()
 	glColor3f(1, 1, 1);
 	glPointSize(5);
 	glBegin(GL_POINTS);
-	
+
 	glVertex2f(1, 1);
 	glVertex2f(2, 1);
 	glVertex2f(3, 1);
@@ -56,7 +56,7 @@ void display()
 
 	glLineWidth(5);
 	glBegin(GL_LINES);
-	
+
 	glVertex2f(1, 2);
 	glVertex2f(5, 2);
 
