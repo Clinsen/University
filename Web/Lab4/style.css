@@ -1,0 +1,45 @@
+div.toppart {
+  background: rgb(24, 24, 24);
+  height: 55px;
+  color: aliceblue;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 25px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+div.underhead {
+  height: 400px;
+  background: whitesmoke;
+}
+
+div.imagecol {
+  height: 400px;
+  background: whitesmoke;
+}
+
+div.elements {
+  background: wheat;
+  height: 200px;
+}
+
+div.offertext {
+  background: whitesmoke;
+  height: 75px;
+}
+
+div.offer {
+  background: wheat;
+  height: 300px;
+}
+
+div.clients {
+  background: whitesmoke;
+  height: 250px;
+}
+
+div.footer {
+  background: rgb(24, 24, 24);
+  height: 55px;
+  color: aliceblue;
+}
