@@ -148,7 +148,32 @@ div.offertext {
 }
 
 .offer > img {
-  width: 250px;
-  height: 250px;
+  width: auto;
+  height: 80%;
   padding-left: 60px;
+}
+
+div.clientstext {
+  padding-top: 50px;
+  padding-left: 60px;
+  background-color: whitesmoke;
+}
+
+div.lefttext {
+  padding-top: 20px;
+  padding-left: 60px;
+  text-align: justify;
+  height: 300px;
+}
+
+div.righttext {
+  padding-top: 20px;
+  padding-right: 60px;
+  text-align: justify;
+  height: 300px;
+}
+
+div.footer {
+  text-align: center;
+  padding-top: 15px;
 }
