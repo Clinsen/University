@@ -10,6 +10,14 @@
 *.userosscache
 *.sln.docstates
 
+# IntelliJ
+*.iml
+*/.idea/workspace.xml 
+*/.idea/tasks.xml
+
+# Dependencies
+Dependencies/
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
