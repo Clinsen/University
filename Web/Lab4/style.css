@@ -74,7 +74,7 @@ div.offertext {
 }
 
 div.offer {
-  background: wheat;
+  background: white;
   height: 300px;
 }
 
@@ -144,5 +144,11 @@ p.insurance {
 
 div.offertext {
   background-color: white;
+  padding-left: 60px;
+}
+
+.offer > img {
+  width: 250px;
+  height: 250px;
   padding-left: 60px;
 }
