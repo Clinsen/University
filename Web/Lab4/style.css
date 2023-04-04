@@ -9,6 +9,7 @@ div.toppart {
 }
 
 div.underhead {
+  padding-top: 20px;
   height: 400px;
   background: whitesmoke;
 }
@@ -16,11 +17,55 @@ div.underhead {
 div.imagecol {
   height: 400px;
   background: whitesmoke;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.imagecol > img {
+  width: auto;
+  height: 360px;
+}
+
+.imagecol {
+  align-items: end;
 }
 
 div.elements {
-  background: wheat;
-  height: 200px;
+  background: white;
+  height: 400px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 80px;
+}
+
+div.element1 {
+  width: 3fr;
+  height: 100%;
+}
+
+.element1 > img {
+  width: 100px;
+  height: 100px;
+}
+
+div.element2 {
+  width: 3fr;
+  height: 100%;
+}
+
+.element2 > img {
+  width: 100px;
+  height: 100px;
+}
+
+div.element3 {
+  width: 3fr;
+  height: 100%;
+}
+
+.element3 > img {
+  width: 100px;
+  height: 100px;
 }
 
 div.offertext {
@@ -42,4 +87,57 @@ div.footer {
   background: rgb(24, 24, 24);
   height: 55px;
   color: aliceblue;
+}
+
+.quoteform {
+  background: rgb(255, 115, 0);
+  border: 1px solid black;
+  border-color: black;
+  color: white;
+  width: 80%;
+  height: 86%;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+form input {
+  width: 80%;
+  padding: 4px;
+  outline: none;
+  margin: 7px;
+}
+
+input[type="button"] {
+  width: 80%;
+  height: auto;
+  margin-top: 5px;
+  border: none;
+  background-color: rgb(22, 22, 22);
+  color: white;
+}
+
+h1 {
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
+}
+
+div.loremtext {
+  text-align: justify;
+  padding: 25px;
+  margin: 10px;
+}
+
+div.infotext {
+  padding: 15px;
+  margin: 10px;
+}
+
+p.insurance {
+  font-size: 20px;
+  padding-top: 5px;
 }
