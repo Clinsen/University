@@ -35,7 +35,7 @@ div.elements {
   height: 400px;
   padding-top: 40px;
   padding-bottom: 40px;
-  padding-left: 80px;
+  padding-left: 60px;
 }
 
 div.element1 {
@@ -140,4 +140,9 @@ div.infotext {
 p.insurance {
   font-size: 20px;
   padding-top: 5px;
+}
+
+div.offertext {
+  background-color: white;
+  padding-left: 60px;
 }
