@@ -1,0 +1,55 @@
+div.toppart {
+  background: rgb(24, 24, 24);
+  height: 55px;
+  color: aliceblue;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 25px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
+}
+
+p.insurance {
+  font-size: 20px;
+  padding-top: 5px;
+}
+
+div.underhead {
+  padding-top: 20px;
+  padding-left: 50px;
+  min-height: 260px;
+  height: auto;
+  background: whitesmoke;
+}
+
+div.table-responsive {
+  padding-right: 20px;
+}
+
+div.clients {
+  padding-top: 20px;
+}
+div.feedback {
+  padding-top: 30px;
+}
+
+div.footer {
+  background: rgb(24, 24, 24);
+  height: 30px;
+  color: aliceblue;
+  text-align: center;
+  padding-top: 4px;
+  width: 100%;
+}
+
+div.general {
+  padding-top: 20px;
+  text-align: justify;
+}
