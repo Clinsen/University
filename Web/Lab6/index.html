@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Мій сайт</title>
+    <title>Laboratorna №6</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="style.css" />
@@ -42,77 +42,201 @@
             <a class="nav-link" href="#reviews">Reviews</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contact">Contacts</a>
+            <a class="nav-link" href="#contacts">Contacts</a>
           </li>
         </ul>
       </div>
     </nav>
 
     <div id="home">
-      <h1>Welcome!</h1>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non fugit qui
-        incidunt est illum labore?
-      </p>
+      <div id="welcome">
+        <h1>Welcome to our page!</h1>
+        <p>
+          Thank you for considering our home insurance services. We understand
+          the importance of protecting your home and belongings, and we are
+          committed to providing you with the best coverage possible.
+        </p>
+      </div>
     </div>
 
     <div id="about">
-      <h2>About us:</h2>
-      <p class="general">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel velit
-        velit. Duis ac volutpat augue. Morbi vestibulum est in nunc suscipit,
-        sit amet iaculis dolor bibendum. Proin malesuada auctor risus, non
-        congue sapien pretium a. Maecenas et velit eu elit pulvinar maximus.
-        Donec euismod commodo tellus vel aliquet. Fusce interdum ipsum vitae
-        dolor convallis commodo. Praesent vel consequat elit, sed molestie
-        lacus. Ut tempor feugiat velit, vitae vestibulum augue commodo quis.
-        Suspendisse fermentum, justo ac laoreet efficitur, turpis purus
-        vestibulum tortor, sit amet rutrum risus ex at dolor.
-      </p>
-      <p class="general">
-        Suspendisse potenti. Pellentesque habitant morbi tristique senectus et
-        netus et malesuada fames ac turpis egestas. Sed condimentum mauris
-        mauris, nec dictum nulla lobortis ac. Curabitur non velit tellus. Nunc
-        nec nibh nibh. Morbi ultricies sem a magna eleifend, eget suscipit massa
-        euismod. Donec eget ante in est eleifend consequat. Etiam quis feugiat
-        sapien. Sed ac feugiat elit. Donec dapibus laoreet velit sed venenatis.
-      </p>
-      <p class="general">
-        Proin eget commodo nisi, id rhoncus leo. Nulla facilisi. Nullam ac
-        dapibus massa. Etiam rhoncus sodales ligula vel feugiat. Morbi bibendum
-        mauris ut faucibus congue. Ut quis turpis id libero finibus rhoncus.
-        Suspendisse consectetur massa vel ipsum convallis sagittis. Pellentesque
-        habitant morbi tristique senectus et netus et malesuada fames ac turpis
-        egestas. Praesent laoreet, lacus euismod hendrerit aliquam, velit felis
-        vehicula ante, sed pharetra nisi felis sed nulla.
-      </p>
+      <div class="row">
+        <div class="col-sm-6">
+          <h2>About us:</h2>
+          <p class="general">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores
+            rerum pariatur ab illo, inventore sed ullam odio ipsam corrupti
+            veniam ducimus eos dolorem excepturi obcaecati dicta veritatis modi
+            nam reprehenderit delectus iure libero animi numquam. Recusandae
+            alias pariatur, voluptatibus quaerat quas exercitationem eligendi
+            corrupti aliquam, tempore dolorem itaque eum quod voluptas! Quasi
+            dicta repellat assumenda nobis minus nihil aut numquam voluptatem
+            earum magnam voluptatibus nemo atque ab vel provident, ipsa voluptas
+            ex ipsam laudantium impedit neque aliquam a natus explicabo. Labore
+            obcaecati voluptatibus in ipsum quis corrupti hic nihil. Libero,
+            deserunt temporibus nemo earum nihil, quis voluptatem ipsum, velit
+            at culpa saepe odio voluptatum asperiores nostrum vel laudantium
+            fugiat quo esse alias perspiciatis illo et? In nesciunt maxime porro
+            nostrum tenetur necessitatibus, sint, illo voluptatem, odio enim
+            accusantium.
+          </p>
+        </div>
+        <div class="col-sm-6">
+          <h2>Location:</h2>
+          <div class="map" id="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.8350984677254!2d24.008750815900907!3d49.82676443998712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae7879ce8cbcb%3A0x7e986fb8d1eb23be!2z0LLRg9C70LjRhtGPINCQ0LrQsNC00LXQvNGW0LrQsCDQkNC90LTRgNGW0Y8g0KHQsNGF0LDRgNC-0LLQsCwgOSwg0JvRjNCy0ZbQsiwg0JvRjNCy0ZbQstGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCA3OTAwMA!5e0!3m2!1suk!2sua!4v1679567180188!5m2!1suk!2sua"
+              width="100%"
+              height="350"
+              style="border: 0; max-width: 97%"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div id="services">
-      <h2>Services</h2>
+    <div id="services" class="container">
+      <h2>Home Insurance Services</h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-        voluptate ducimus enim pariatur architecto consequuntur, officiis
-        molestiae suscipit necessitatibus distinctio.
+        We offer a variety of home insurance services to meet your needs. Fill
+        out the form below to get started.
       </p>
+      <form>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone:</label>
+          <input
+            type="tel"
+            class="form-control"
+            id="phone"
+            placeholder="Enter your phone number"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="address">Address:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="address"
+            placeholder="Enter your address"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="policy">Policy Type:</label>
+          <select class="form-control" id="policy" required>
+            <option value="">--Select Policy Type--</option>
+            <option value="Homeowners">Homeowners</option>
+            <option value="Renters">Renters</option>
+          </select>
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Get Insurance</button>
+      </form>
     </div>
+    <br />
 
+    <h2 class="reviews">Reviews</h2>
     <div id="reviews">
-      <h2>Reviews</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-        voluptate ducimus enim pariatur architecto consequuntur, officiis
-        molestiae suscipit necessitatibus distinctio.
-      </p>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card border-dark mb-3">
+            <img
+              class="card-img-top"
+              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cG9ydHJhaXR8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+              alt="Customer 1"
+            />
+            <div class="card-body">
+              <p class="card-text">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac
+                posuere dui, et luctus purus. Nullam sit amet nisl at eros
+                pretium sodales ut non quam. Pellentesque habitant morbi
+                tristique senectus et netus et malesuada fames ac turpis
+                egestas."
+              </p>
+              <p class="card-text"><small>Name Surname</small></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-dark mb-3">
+            <img
+              class="card-img-top"
+              src="https://images.unsplash.com/photo-1558730234-d8b2281b0d00?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHBvcnRyYWl0fGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+              alt="Customer 2"
+            />
+            <div class="card-body">
+              <p class="card-text">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac
+                posuere dui, et luctus purus. Nullam sit amet nisl at eros
+                pretium sodales ut non quam. Pellentesque habitant morbi
+                tristique senectus et netus et malesuada fames ac turpis
+                egestas."
+              </p>
+              <p class="card-text"><small>Name Surname</small></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-dark mb-3">
+            <img
+              class="card-img-top"
+              src="https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHBvcnRyYWl0fGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+              alt="Customer 3"
+            />
+            <div class="card-body">
+              <p class="card-text">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac
+                posuere dui, et luctus purus. Nullam sit amet nisl at eros
+                pretium sodales ut non quam. Pellentesque habitant morbi
+                tristique senectus et netus et malesuada fames ac turpis
+                egestas."
+              </p>
+              <p class="card-text"><small>Name Surname</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div id="contact">
-      <h2>Контакти</h2>
+    <div id="contacts">
+      <h2>Contact Us</h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-        voluptate ducimus enim pariatur architecto consequuntur, officiis
-        molestiae suscipit necessitatibus distinctio.
+        We would love to hear from you! Please reach out to us using one of the
+        following methods:
       </p>
+      <ul>
+        <li>Email: LoremIpsum@mycompany.com</li>
+        <li>Phone: +123 456 65 311 23</li>
+        <li>Address: 123 Lorem St, Ipsum Dolor</li>
+      </ul>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12 footer">© 2023 Copyright: loremipsum.com</div>
     </div>
 
     <!-- Підключення скриптів Bootstrap -->
