@@ -133,7 +133,7 @@ private:
         glBegin(GL_TRIANGLES);
         glTexCoord2f(0.0f, 0.0f); glVertex2f(-0.5f, -0.5f); // bottom-left vertex
         glTexCoord2f(0.0f, 1.0f); glVertex2f(0.5f, -0.5f); // bottom-right vertex
-        glTexCoord2f(1.0f, 1.0f);  glVertex2f(0.0f, 0.5f); // top vertex
+        glTexCoord2f(1.0f, 0.0f);  glVertex2f(0.0f, 0.5f); // top vertex
         glEnd();
 
         glDisable(GL_TEXTURE_2D);
