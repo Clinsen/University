@@ -135,7 +135,7 @@ void specialKeys(int key, int x, int y)
 
 void init()
 {
-	glClearColor(0.0, 0.0, 0.0, 1.0);
+	glClearColor(0.6, 0.9, 1.0, 1.0);
 	glEnable(GL_DEPTH_TEST);
 }
 

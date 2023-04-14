@@ -98,42 +98,42 @@ private:
         glEnable(GL_TEXTURE_2D);
 
         glBindTexture(GL_TEXTURE_2D, texID);
-        glColor3f(0, 0, 0);
+        //glColor3f(0, 0, 0);
 
-        glBegin(GL_POLYGON); // top
-        glTexCoord2f(0.0f, 0.0f); glVertex3f(-1.0f, 1.0f, 1.0f); // vertex A
-        glTexCoord2f(0.0f, 1.0f); glVertex3f(-0.5f, 1.0f, 0.0f); // vertex B
-        glTexCoord2f(1.0f, 1.0f); glVertex3f(0.5f, 1.0f, 0.0f); // vertex C
-        glTexCoord2f(1.0f, 0.0f); glVertex3f(1.0f, 1.0f, 1.0f); // vertex D
-        glTexCoord2f(0.5f, 0.5f); glVertex3f(0.0f, 1.0f, 1.5f); // vertex E
-        glEnd();
+        //glBegin(GL_POLYGON); // top
+        //glTexCoord2f(0.0f, 0.0f); glVertex3f(-1.0f, 1.0f, 1.0f); // vertex A
+        //glTexCoord2f(0.0f, 1.0f); glVertex3f(-0.5f, 1.0f, 0.0f); // vertex B
+        //glTexCoord2f(1.0f, 1.0f); glVertex3f(0.5f, 1.0f, 0.0f); // vertex C
+        //glTexCoord2f(1.0f, 0.0f); glVertex3f(1.0f, 1.0f, 1.0f); // vertex D
+        //glTexCoord2f(0.5f, 0.5f); glVertex3f(0.0f, 1.0f, 1.5f); // vertex E
+        //glEnd();
 
-        glBegin(GL_LINES);
+        //glBegin(GL_LINES);
 
-        glTexCoord2f(0.0f, 0.0f); glVertex3f(-1.0f, 1.0f, 1.0f); // vertex A
-        glTexCoord2f(0.0f, 1.0f); glVertex3f(-1.0f, -1.0f, 1.0f); // vertex F
-        glTexCoord2f(0.0f, 0.0f); glVertex3f(-0.5f, 1.0f, 0.0f); // vertex B
-        glTexCoord2f(0.0f, 1.0f); glVertex3f(-0.5f, -1.0f, 0.0f); // vertex G
-        glTexCoord2f(0.0f, 0.0f); glVertex3f(0.5f, 1.0f, 0.0f); // vertex C
-        glTexCoord2f(0.0f, 1.0f); glVertex3f(0.5f, -1.0f, 0.0f); // vertex H
-        glTexCoord2f(0.0f, 0.0f); glVertex3f(1.0f, 1.0f, 1.0f); // vertex D
-        glTexCoord2f(0.0f, 1.0f); glVertex3f(1.0f, -1.0f, 1.0f); // vertex I
-        glTexCoord2f(0.0f, 0.0f); glVertex3f(0.0f, 1.0f, 1.5f); // vertex E
-        glTexCoord2f(0.0f, 1.0f); glVertex3f(0.0f, -1.0f, 1.5f); // vertex J
-        glEnd();
+        //glTexCoord2f(0.0f, 0.0f); glVertex3f(-1.0f, 1.0f, 1.0f); // vertex A
+        //glTexCoord2f(0.0f, 1.0f); glVertex3f(-1.0f, -1.0f, 1.0f); // vertex F
+        //glTexCoord2f(0.0f, 0.0f); glVertex3f(-0.5f, 1.0f, 0.0f); // vertex B
+        //glTexCoord2f(0.0f, 1.0f); glVertex3f(-0.5f, -1.0f, 0.0f); // vertex G
+        //glTexCoord2f(0.0f, 0.0f); glVertex3f(0.5f, 1.0f, 0.0f); // vertex C
+        //glTexCoord2f(0.0f, 1.0f); glVertex3f(0.5f, -1.0f, 0.0f); // vertex H
+        //glTexCoord2f(0.0f, 0.0f); glVertex3f(1.0f, 1.0f, 1.0f); // vertex D
+        //glTexCoord2f(0.0f, 1.0f); glVertex3f(1.0f, -1.0f, 1.0f); // vertex I
+        //glTexCoord2f(0.0f, 0.0f); glVertex3f(0.0f, 1.0f, 1.5f); // vertex E
+        //glTexCoord2f(0.0f, 1.0f); glVertex3f(0.0f, -1.0f, 1.5f); // vertex J
+        //glEnd();
 
-        glBegin(GL_POLYGON); // top
-        glTexCoord2f(0.0f, 0.0f); glVertex3f(-1.0f, -1.0f, 1.0f); // vertex A
-        glTexCoord2f(0.0f, 1.0f); glVertex3f(-0.5f, -1.0f, 0.0f); // vertex B
-        glTexCoord2f(1.0f, 1.0f); glVertex3f(0.5f, -1.0f, 0.0f); // vertex C
-        glTexCoord2f(1.0f, 0.0f); glVertex3f(1.0f, -1.0f, 1.0f); // vertex D
-        glTexCoord2f(0.5f, 0.5f); glVertex3f(0.0f, -1.0f, 1.5f); // vertex E
-        glEnd();
+        //glBegin(GL_POLYGON); // top
+        //glTexCoord2f(0.0f, 0.0f); glVertex3f(-1.0f, -1.0f, 1.0f); // vertex A
+        //glTexCoord2f(0.0f, 1.0f); glVertex3f(-0.5f, -1.0f, 0.0f); // vertex B
+        //glTexCoord2f(1.0f, 1.0f); glVertex3f(0.5f, -1.0f, 0.0f); // vertex C
+        //glTexCoord2f(1.0f, 0.0f); glVertex3f(1.0f, -1.0f, 1.0f); // vertex D
+        //glTexCoord2f(0.5f, 0.5f); glVertex3f(0.0f, -1.0f, 1.5f); // vertex E
+        //glEnd();
 
         glBegin(GL_TRIANGLES);
         glTexCoord2f(0.0f, 0.0f); glVertex2f(-0.5f, -0.5f); // bottom-left vertex
         glTexCoord2f(0.0f, 1.0f); glVertex2f(0.5f, -0.5f); // bottom-right vertex
-        glTexCoord2f(1.0f, 1.0f);  glVertex2f(0.0f, 0.5f); // top vertex
+        glTexCoord2f(1.0f, 0.0f);  glVertex2f(0.0f, 0.5f); // top vertex
         glEnd();
 
         glDisable(GL_TEXTURE_2D);
@@ -276,7 +276,7 @@ int main(int argc, char** argv)
     glutInitWindowPosition(100, 100);
     glutInitWindowSize(800, 600);
 
-    glutCreateWindow("Laboratorna #3");
+    glutCreateWindow("Laboratorna no. 3");
 
     glutDisplayFunc(glutDisplay);
 
