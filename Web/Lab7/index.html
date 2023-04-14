@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Laboratorna №7</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        font-size: 16px;
+      }
+
+      th,
+      td {
+        padding: 8px;
+        text-align: center;
+        border: 1px solid black;
+      }
+
+      th {
+        background-color: #ddd;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+    </style>
+    <script>
+      let xStart = -1;
+      let xEnd = 1;
+      let deltaX = 0.2;
+
+      // y
+      let yStart = -2;
+      let yEnd = 2;
+      let deltaY = 0.2;
+
+      // z
+      let z = 1.32;
+
+      const calculateB = function (x, y, z) {
+        let firstBPart = Math.atan((Math.pow(x, 2) + y) / (z + 1));
+        let secondBPart = Math.pow(Math.cos(firstBPart), 2);
+        let thirdBPart = (x / y) * Math.pow(Math.E, 3 * x + y);
+
+        return secondBPart + thirdBPart;
+      };
+
+      const calculateA = function (x, y, z, b) {
+        let firstAPart =
+          1 + Math.sqrt(Math.pow(Math.sin(Math.pow(Math.abs(x + y), 0.4)), 2));
+        let secondAPart =
+          2 + Math.pow(b, 2) + Math.pow(Math.sin(Math.pow(y, 3)), 2);
+        let thirdAPart = Math.tan((3 * x) / y);
+
+        return (firstAPart / secondAPart) * thirdAPart;
+      };
+
+      const tabulate = function (operation) {
+        let table = document.getElementById("table");
+
+        // Clear the table
+        table.innerHTML = "";
+
+        // Create the table header row
+        let header = table.insertRow(0);
+        header.insertCell(0).innerHTML = "x";
+        header.insertCell(1).innerHTML = "y";
+        header.insertCell(2).innerHTML = operation;
+
+        for (let x = xStart; x <= xEnd; x += deltaX) {
+          for (let y = yStart; y <= yEnd; y += deltaY) {
+            let result;
+            switch (operation) {
+              case "a":
+                let b = calculateB(x, y, z);
+                result = calculateA(x, y, z, b);
+                break;
+              case "b":
+                result = calculateB(x, y, z);
+                break;
+              default:
+                throw new Error(`There is no "${operation}" operation!`);
+                break;
+            }
+
+            let row = table.insertRow(-1);
+            row.insertCell(0).innerHTML = x.toFixed(2);
+            row.insertCell(1).innerHTML = y.toFixed(2);
+            row.insertCell(2).innerHTML = result.toFixed(4);
+          }
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <h1>Tabulation</h1>
+    <button onclick="tabulate('a')">Tabulate Function A</button>
+    <button onclick="tabulate('b')">Tabulate Function B</button>
+    <table id="table"></table>
+  </body>
+</html>
