@@ -18,9 +18,10 @@ GLfloat controlPoints[][3] = {
 
 void drawCurve() {
     glPushMatrix();
-    glColor3f(1.0, 1.0, 1.0);
+    glColor3f(0.0, 0.0, 0.0); // Встановлення чорного кольору лінії
     glBegin(GL_LINE_STRIP);
     for (float t = 0.0; t <= 1.0; t += 0.01) {
+        // Розрахунок координати точки кривої
         float x = (1 - t) * (1 - t) * (1 - t) * (1 - t) * (1 - t) * controlPoints[0][0]
             + 5 * t * (1 - t) * (1 - t) * (1 - t) * (1 - t) * controlPoints[1][0]
             + 10 * t * t * (1 - t) * (1 - t) * (1 - t) * controlPoints[2][0]
