@@ -5,18 +5,16 @@ void main() {
   double y = 4.6 * 6;
   double z = 36.6 / 6;
 
-  Function a = (double bValue) {
-    double b() {
-      return pow(cos(atan((pow(x, 2) + y) / (z + 1)) + x / y * exp(3 * x + y)), 2).toDouble();
-    }
-
-    return (1 + sqrt(pow(sin(pow((x + y).abs(), 0.4)), 2))) /
-        (2 + pow(bValue, 2) + pow(sin(pow(y, 3)), 2));
+  Function a = (double xValue, double yValue, double zValue) {
+    return (1 + sqrt(pow(sin(pow((xValue + yValue).abs(), 0.4)), 2))) /
+        (2 + pow(pow(cos(atan((pow(xValue, 2) + yValue) / (zValue + 1)) +
+            xValue / yValue * exp(3 * xValue + yValue)), 2), 2) +
+            pow(sin(pow(yValue, 3)), 2));
   };
 
   for (int i = 1; i <= 10; i++) {
-    double resultB = a(x);
-    double resultA = a(resultB);
+    double resultB = a(x, y, z);
+    double resultA = a(x + i, y, z);
     print('Ітерація $i: Значення a = $resultA; Значення b = $resultB');
   }
 }
