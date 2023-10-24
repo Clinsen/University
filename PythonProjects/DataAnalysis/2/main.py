@@ -1,31 +1,53 @@
 import numpy as np
-from scipy.stats import f_oneway
+import pandas as pd
+from scipy import stats
 
 # Дані з таблиці
-data = [
-    [1.55, 1.62, 1.69, 1.76],
-    [0.70, 0.52, 0.34, 0.17],
-    [0.22, 0.12, 0.47, 0.81],
-    [0.38, 0.91, 1.45, 1.99],
-    [1.70, 2.79, 3.89],
-    [2.88, 4.35, 5.83],
-    [10.73]
-]
-
-groups = len(data)
+group1 = [1.55, 0.7, 0.22, 0.38, 1.7, 2.88, 10.73]
+group2 = [1.62, 0.52, 0.12, 0.91, 2.79, 4.35]
+group3 = [1.69, 0.34, 0.47, 1.45, 3.89, 5.83]
+group4 = [1.76, 0.17, 0.81, 1.99]
 
 # Виконуємо дисперсійний аналіз
-f_statistic, p_value = f_oneway(*data)
+f_statistic, p_value = stats.f_oneway(group1, group2, group3, group4)
 
-k = 6
-alpha_values = [0.01, 0.025, 0.05, 0.095, 0.975, 0.99]
-critical_values = [16.8, 14.4, 12.6, 1.64, 1.24, 0.872]
+# Заданий рівень значущості
+alpha = 0.05
 
-print(f"F-статистика: {f_statistic}")
-print(f"P-значення: {p_value}\n")
+# Виводимо результати
+print("Результати дисперсійного аналізу:")
+print("F-статистика:", f_statistic)
+print("P-значення:", p_value)
 
-for alpha, crit_value in zip(alpha_values, critical_values):
-    if f_statistic > crit_value:
-        print(f"Рівність середніх не підтверджена (alpha = {alpha}). Є статистично значущі різниці.")
-    else:
-        print(f"Рівність середніх підтверджена (alpha = {alpha}). Немає статистично значущих різниць.")
+# Перевіримо на значущість
+if p_value < alpha:
+    print("Результат є статистично значущим, відхиляємо нульову гіпотезу")
+else:
+    print("Результат не є статистично значущим, не можемо відхилити нульову гіпотезу")
+
+# Розрахунок середніх значень для кожної групи
+mean_group1 = np.mean(group1)
+mean_group2 = np.mean(group2)
+mean_group3 = np.mean(group3)
+mean_group4 = np.mean(group4)
+
+# Розрахунок стандартного відхилення для кожної групи
+std_group1 = np.std(group1, ddof=1)
+std_group2 = np.std(group2, ddof=1)
+std_group3 = np.std(group3, ddof=1)
+std_group4 = np.std(group4, ddof=1)
+
+# Виводимо середні значення та стандартне відхилення для кожної групи
+print("\nСереднє значення для групи 1:", mean_group1)
+print("Стандартне відхилення для групи 1:", std_group1)
+
+print("\nСереднє значення для групи 2:", mean_group2)
+print("Стандартне відхилення для групи 2:", std_group2)
+
+print("\nСереднє значення для групи 3:", mean_group3)
+print("Стандартне відхилення для групи 3:", std_group3)
+
+print("\nСереднє значення для групи 3:", mean_group4)
+print("Стандартне відхилення для групи 3:", std_group4)
+
+
