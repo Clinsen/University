@@ -12,13 +12,11 @@ data = [
     [10.73]
 ]
 
-# Заводи (групи)
 groups = len(data)
 
 # Виконуємо дисперсійний аналіз
 f_statistic, p_value = f_oneway(*data)
 
-# Число ступенів свободи k та рівень значущості а
 k = 6
 alpha_values = [0.01, 0.025, 0.05, 0.095, 0.975, 0.99]
 critical_values = [16.8, 14.4, 12.6, 1.64, 1.24, 0.872]
@@ -26,7 +24,6 @@ critical_values = [16.8, 14.4, 12.6, 1.64, 1.24, 0.872]
 print(f"F-статистика: {f_statistic}")
 print(f"P-значення: {p_value}\n")
 
-# Порівняємо F-статистику з критичними значеннями для різних рівнів значущості
 for alpha, crit_value in zip(alpha_values, critical_values):
     if f_statistic > crit_value:
         print(f"Рівність середніх не підтверджена (alpha = {alpha}). Є статистично значущі різниці.")
