@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 
-// Клас представлення об'єкту Wolf
 public class Wolf
 {
     public string Name { get; set; }
@@ -40,7 +39,7 @@ public class WolfCollection
     }
 }
 
-// Клас GenericWolfCollection для зберігання колекції об'єктів Wolf з використанням List<>
+// Клас GenericWolfCollection для зберігання колекції об'єктів Wolf з використанням List
 public class GenericWolfCollection
 {
     private List<Wolf> wolves = new List<Wolf>();
@@ -94,7 +93,7 @@ class Program
             Console.WriteLine("Wolf not found.\n");
         }
 
-        // Використання GenericWolfCollection з List<>
+        // Використання GenericWolfCollection з List
         GenericWolfCollection genericWolfCollection = new GenericWolfCollection();
 
         genericWolfCollection.AddWolf(new Wolf { Name = "Gamma", Age = 4 });
