@@ -1,0 +1,63 @@
+clear; clc;
+numInputs=2; % – кількість входів мережі;
+numLayers=5; % – кількість шарів у мережі;
+biasConnect=[0;0;0;0;0]; % – зв’язуюча матриця для зміщень розміру numLayers *
+1;
+inputConnect=[1 1; 0 0; 0 0;0 0;0 0]; % – зв’язуюча матриця для входів розміру
+numLayers * numInputs;
+layerConnect=[0 0 0 0 0;
+1 0 0 0 0;
+0 1 0 0 0;
+0 0 1 0 0;
+0 1 0 1 0]; %– зв’язуюча матриця для шарів розміру numLayers *
+numLayers;
+outputConnect=[0 0 0 0 1]; %– зв’язуюча матриця для виходів розміру 1*
+numLayers;
+%targetConnect=[0 0 0 0 0]; – зв’язуюча матриця для цілей розміру 1 *numLayers.
+net = network (numInputs, numLayers, biasConnect, inputConnect, layerConnect, outputConnect);
+net.inputs{1}.range=[0 1];
+net.inputs{2}.range=[0 1];
+% задаємо число нейронів для і-го шару
+net.layers{1}.size = 1;
+net.layers{2}.size = 3;
+net.layers{3}.size = 2;
+net.layers{4}.size = 1;
+net.layers{5}.size = 3;
+net.inputs{1}.range = [0,1];
+net.inputs{2}.range = [0,1];
+%масив комірок з матрицями вагів входів
+net.IW{1, 1}= 2 * ones(1,1);
+net.IW{1, 2}= -2 * ones(1,1);
+%масив комірок з матрицями вaгів для шарів
+net.LW{2, 1}= 0.5 * ones(3,1);
+net.LW{3, 2}= 2 * ones(2,3);
+net.LW{4, 3}= 1.4 * ones(1,2);
+
+net.LW{5, 4}= 2 * ones(3,1);
+net.LW{5, 2}= -1 * ones(3,3);
+gensim(net)%перевіряємо параметри блоку.
+ 
+asgnet = network (numInputs, numLayers, biasConnect, inputConnect, layerConnect, outputConnect);
+asgnet.inputs{1}.range=[0 1];
+asgnet.inputs{2}.range=[0 1];
+% задаємо число нейронів для і-го шару
+asgnet.layers{1}.size = 1;
+asgnet.layers{2}.size = 3;
+asgnet.layers{3}.size = 2;
+asgnet.layers{4}.size = 1;
+asgnet.layers{5}.size = 3;
+asgnet.inputs{1}.range = [0,1];
+asgnet.inputs{2}.range = [0,1];
+%масив комірок з матрицями вагів входів
+asgnet.IW{1, 1}= 2 * ones(1,1);
+asgnet.IW{1, 2}= -2 * ones(1,1);
+%масив комірок з матрицями вaгів для шарів
+asgnet.LW{2, 1}= 0.5 * ones(3,1);
+asgnet.LW{3, 2}= 2 * ones(2,3);
+asgnet.LW{4, 3}= 1.4 * ones(1,2);
+
+asgnet.LW{5, 4}= 2 * ones(3,1);
+asgnet.LW{5, 2}= -1 * ones(3,3);
+gensim(asgnet)%перевіряємо параметри блоку.
+
+nntool
