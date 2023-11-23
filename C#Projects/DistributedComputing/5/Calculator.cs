@@ -3,11 +3,12 @@ using System.Threading;
 
 namespace FunctionCalculator
 {
-    class Calculator
+    public class Calculator
     {
         private object lockObject = new object();
         private Random random = new Random();
-        private int[] results = new int[10];
+        private double[] results = new double[10];
+        private int argument = 0;
 
         public void StartCalculations()
         {
@@ -20,15 +21,14 @@ namespace FunctionCalculator
         {
             for (int i = 0; i < results.Length; i++)
             {
-                int x = random.Next(1, 11);
-
                 try
                 {
-                    int result = ComputeFunctionValue(x);
+                    double result = ComputeFunctionValue();
                     lock (lockObject)
                     {
                         results[i] = result;
                     }
+                    Console.WriteLine($"Результат {i + 1}: {result}");
                 }
                 catch (FunctionException ex)
                 {
@@ -39,27 +39,30 @@ namespace FunctionCalculator
             }
         }
 
-        public int ComputeFunctionValue(int x)
+        public double ComputeFunctionValue()
         {
-            if (x < 5)
+            IncrementArgument();
+
+            if (argument < 5)
             {
-                return 4 * x * x + 1;
+                return 4 * argument * argument + 1;
             }
-            else if (x > 5)
+            else
             {
-                int denominator = 3 * x * x + 2 * x + 7;
+                double denominator = 3 * argument * argument + 2 * argument + 7;
 
                 if (denominator == 0)
                 {
                     throw new FunctionException("Недопустиме значення x: знаменник не може дорівнювати 0.");
                 }
 
-                return (2 * x + 3) / denominator;
+                return (2 * argument + 3) / denominator;
             }
-            else
-            {
-                throw new FunctionException("Недопустиме значення x: функція не визначена для x = 5.");
-            }
+        }
+
+        public void IncrementArgument()
+        {
+            argument++;
         }
 
         public void DisplayResults()
