@@ -3,105 +3,117 @@ using System.Threading;
 
 namespace FunctionCalculator
 {
-    class Calculator
+    public class Calculator
     {
         private object lockObject = new object();
-        private int[] resultsPart1 = new int[5];
-        private int[] resultsPart2 = new int[5];
+        private Random random = new Random();
+        private double[] results = new double[10];
+        private int argument = 0;
 
         public void StartCalculations()
         {
-            Thread part1Thread = new Thread(CalculatePart1);
-            Thread part2Thread = new Thread(CalculatePart2);
+            Thread firstThread = new Thread(CalculateFirstPart);
+            Thread secondThread = new Thread(CalculateSecondPart);
 
-            part1Thread.Start();
-            part2Thread.Start();
+            firstThread.Start();
+            secondThread.Start();
 
-            part1Thread.Join();
-            part2Thread.Join();
+            firstThread.Join();
+            secondThread.Join();
         }
 
-        public void CalculatePart1()
+        private void CalculateFirstPart()
         {
-            for (int i = 0; i < resultsPart1.Length; i++)
+            for (int i = 0; i < 5; i++)
             {
-                int x = new Random().Next(1, 6);
-
                 try
                 {
-                    int result = ComputePart1Value(x);
+                    double result = ComputeFirstPart();
                     lock (lockObject)
                     {
-                        resultsPart1[i] = result;
+                        results[i] = result;
                     }
+                    Console.WriteLine($"Результат (Частина 1, Потік 1): {result}");
                 }
                 catch (FunctionException ex)
                 {
-                    Console.WriteLine($"Помилка: {ex.Message}");
+                    Console.WriteLine($"Помилка (Частина 1, Потік 1): {ex.Message}");
                 }
 
                 Thread.Sleep(200);
             }
         }
 
-        public void CalculatePart2()
+        private void CalculateSecondPart()
         {
-            Thread.Sleep(3200);
-
-            for (int i = 0; i < resultsPart2.Length; i++)
+            Console.WriteLine("Потік 2 очікує умову.");
+            while (argument < 5)
             {
-                int x = new Random().Next(6, 11);
+                Thread.Sleep(1000);
+            }
+            Console.WriteLine("\nУмова виконана. Потік 2 розпочинає обчислення.");
 
+            for (int i = 5; i < results.Length; i++)
+            {
                 try
                 {
-                    int result = ComputePart2Value(x);
+                    double result = ComputeSecondPart();
                     lock (lockObject)
                     {
-                        resultsPart2[i] = result;
+                        results[i] = result;
                     }
+                    Console.WriteLine($"Результат (Частина 2, Потік 2): {result}");
                 }
                 catch (FunctionException ex)
                 {
-                    Console.WriteLine($"Помилка: {ex.Message}");
+                    Console.WriteLine($"Помилка (Частина 2, Потік 2): {ex.Message}");
                 }
 
                 Thread.Sleep(200);
             }
         }
 
-        public int ComputePart1Value(int x)
+        private double ComputeFirstPart()
         {
-            if (x == 1)
+            IncrementArgument();
+
+            if (argument < 5)
             {
-                throw new FunctionException("Недопустиме значення x: функція не визначена для x = 1.");
+                return 4 * argument * argument + 1;
             }
-            return 4 * x * x + 1;
+            else
+            {
+                double denominator = 3 * argument * argument + 2 * argument + 7;
+
+                if (denominator == 0)
+                {
+                    throw new FunctionException("Недопустиме значення x: знаменник не може дорівнювати 0.");
+                }
+
+                return (2 * argument + 3) / denominator;
+            }
         }
 
-        public int ComputePart2Value(int x)
+        private double ComputeSecondPart()
         {
-            int denominator = 3 * x * x + 2 * x + 7;
+            IncrementArgument();
 
-            if (denominator == 0)
+            return Math.Sin(argument);
+        }
+
+        public void IncrementArgument()
+        {
+            lock (lockObject)
             {
-                throw new FunctionException("Недопустиме значення x: знаменник не може дорівнювати 0.");
+                argument++;
             }
-
-            return (2 * x + 3) / denominator;
         }
 
         public void DisplayResults()
         {
-            Console.WriteLine("Частина 1 функції:");
-            for (int i = 0; i < resultsPart1.Length; i++)
+            for (int i = 0; i < results.Length; i++)
             {
-                Console.WriteLine($"Результат {i + 1}: {resultsPart1[i]}");
-            }
-
-            Console.WriteLine("Частина 2 функції:");
-            for (int i = 0; i < resultsPart2.Length; i++)
-            {
-                Console.WriteLine($"Результат {i + 1}: {resultsPart2[i]}");
+                Console.WriteLine($"Результат {i + 1}: {results[i]}");
             }
         }
     }
