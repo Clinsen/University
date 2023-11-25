@@ -1,8 +1,6 @@
-﻿using System;
-
-class Employee
+﻿class Employee
 {
-    public string Name { get; set; }
+    public string Name { get; }
 
     public Employee(string name)
     {

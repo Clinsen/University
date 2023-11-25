@@ -7,7 +7,9 @@ class Program
     {
         Console.OutputEncoding = System.Text.Encoding.UTF8;
 
-        Matrix matrix = new Matrix(5, 5);
+        Matrix matrix = new Matrix(5, 10);
+
+        matrix.DisplayMatrix("Початкова матриця");
 
         Thread thread1 = new Thread(() =>
         {
@@ -19,6 +21,7 @@ class Program
         {
             matrix.SortRowsByPositiveElementsCount();
             Console.WriteLine("Рядки матриці відсортовані за кількістю позитивних елементів.");
+            matrix.DisplayMatrix("\nМатриця після сортування");
         });
 
         Thread thread3 = new Thread(() =>

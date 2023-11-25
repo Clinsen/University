@@ -7,22 +7,31 @@ class Program
     {
         Console.OutputEncoding = System.Text.Encoding.UTF8;
 
-        Matrix matrix = new Matrix(5, 5);
+        Matrix matrix = new Matrix(5, 10);
+
+        matrix.DisplayMatrix("Початкова матриця");
+
+        SyncHelper synchronizationHelper = new SyncHelper();
 
         Thread thread1 = new Thread(() =>
         {
             int nonNegativeColumn = matrix.FindFirstNonNegativeColumn();
+            synchronizationHelper.ReleaseSemaphore();
             Console.WriteLine($"Номер першого стовпця без від'ємних елементів: {nonNegativeColumn}");
         });
 
         Thread thread2 = new Thread(() =>
         {
+            synchronizationHelper.WaitSemaphore();
             matrix.SortRowsByPositiveElementsCount();
+            synchronizationHelper.ReleaseMutex();
             Console.WriteLine("Рядки матриці відсортовані за кількістю позитивних елементів.");
+            matrix.DisplayMatrix("\nМатриця після сортування");
         });
 
         Thread thread3 = new Thread(() =>
         {
+            synchronizationHelper.WaitMutex();
             int sum = matrix.SumOfRowsWithNegativeElement();
             Console.WriteLine($"Сума елементів у рядках з від'ємними елементами: {sum}");
         });

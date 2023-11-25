@@ -18,7 +18,7 @@ class Matrix
         get { return data[i, j]; }
     }
 
-    // Конструктор ініціалізує матрицю з випадковими значеннями
+    // Випадкові значення для матриці від -10 до 10
     public Matrix(int rows, int columns)
     {
         data = new int[rows, columns];
@@ -28,12 +28,11 @@ class Matrix
         {
             for (int j = 0; j < columns; j++)
             {
-                data[i, j] = random.Next(-100, 101);
+                data[i, j] = random.Next(-10, 11);
             }
         }
     }
 
-    // Логіка для знаходження номера першого стовпця без від'ємних елементів
     public int FindFirstNonNegativeColumn()
     {
         for (int j = 0; j < Columns; j++)
@@ -54,10 +53,9 @@ class Matrix
             }
         }
 
-        return -1; // Якщо немає стовпців без від'ємних елементів
+        return -1;
     }
 
-    // Логіка для підрахунку кількості позитивних елементів у вказаному рядку
     public int CountPositiveElementsInRow(int rowIndex)
     {
         int count = 0;
@@ -72,7 +70,6 @@ class Matrix
         return count;
     }
 
-    // Логіка для обчислення суми елементів у рядках з від'ємними елементами
     public int SumOfRowsWithNegativeElement()
     {
         int sum = 0;
@@ -100,7 +97,6 @@ class Matrix
         return sum;
     }
 
-    // Логіка сортування рядків за кількістю позитивних елементів
     public void SortRowsByPositiveElementsCount()
     {
         var query = from row in Enumerable.Range(0, Rows)
@@ -120,5 +116,19 @@ class Matrix
         }
 
         data = newData;
+    }
+
+    public void DisplayMatrix(string message)
+    {
+        Console.WriteLine($"{message}:");
+        for (int i = 0; i < Rows; i++)
+        {
+            for (int j = 0; j < Columns; j++)
+            {
+                Console.Write($"{data[i, j]} ");
+            }
+            Console.WriteLine();
+        }
+        Console.WriteLine();
     }
 }
