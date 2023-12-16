@@ -9,7 +9,7 @@ namespace FunctionCalculator
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
             Calculator calculator = new Calculator();
-            //CustomTimer timer = new CustomTimer(100, calculator);
+            CustomTimer timer = new CustomTimer(100, calculator);
 
             calculator.StartCalculations();
 

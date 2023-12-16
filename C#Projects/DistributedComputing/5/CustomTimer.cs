@@ -1,4 +1,4 @@
-﻿/*using FunctionCalculator;
+﻿using FunctionCalculator;
 
 public class CustomTimer
 {
@@ -27,4 +27,3 @@ public class CustomTimer
         calculator.IncrementArgument();
     }
 }
-*/
