@@ -6,7 +6,7 @@ from statsmodels.regression.linear_model import OLS
 from statsmodels.tools.tools import add_constant
 from statsmodels.stats.diagnostic import acorr_ljungbox
 
-# Задані дані
+# Задані дані (В-6)
 Y_values = np.array([9, 6, 3, 8, 15, 5, 7, 6, 13, 9, 4, 10, 15, 7, 6, 8])
 T_values = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16])
 
