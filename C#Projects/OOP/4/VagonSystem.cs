@@ -4,7 +4,7 @@ public interface INewVagonSystem
     void MatchSocket();
 }
 
-// Клас, що реалізує сучасну систему вагону
+// Клас що реалізує сучасну систему вагону
 public class NewVagonSystem : INewVagonSystem
 {
     public void MatchSocket()
