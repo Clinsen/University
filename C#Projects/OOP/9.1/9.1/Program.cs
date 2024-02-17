@@ -4,7 +4,7 @@ using static PlayerState;
 class Program {
     static void Main() {
         Console.OutputEncoding = Console.InputEncoding = Encoding.Unicode;
-        RadioPlayer player = new RadioPlayer();
+        MusicPlayer player = new MusicPlayer();
 
         player.Play();
         player.SetState(new UnlockedState());

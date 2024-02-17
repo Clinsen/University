@@ -1,9 +1,9 @@
 ﻿using static PlayerState;
 
-public class RadioPlayer {
+public class MusicPlayer {
     private IPlayerState _state;
 
-    public RadioPlayer() {
+    public MusicPlayer() {
         _state = new LockedState();
     }
 
