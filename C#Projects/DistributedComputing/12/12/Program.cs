@@ -21,7 +21,7 @@ class Program {
         // Оцінка ефективності реалізованих паралельних алгоритмів
         Evaluation.EvaluateEfficiency(sequentialTimeSpan, parallelTimeSpan);
 
-        // Оцінка максимального прискорення законом Амдала Amdahl's Law
+        // Оцінка максимального прискорення законом Амдала
         Evaluation.EvaluateAmdahlSpeedup(sequentialTimeSpan, parallelTimeSpan);
 
         // Оцінка максимального прискорення законом Густавсона-Барсіса
