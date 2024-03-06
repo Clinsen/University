@@ -1,0 +1,5 @@
+% Функція для обчислення середнього значення списку чисел
+function meanValue = calculateMean(numbers)
+    n = length(numbers);
+    meanValue = sum(numbers) / n;
+end

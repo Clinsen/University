@@ -1,0 +1,4 @@
+% Функція для обчислення синуса кута у радіанах
+function sinValue = calculateSin(angle)
+    sinValue = sin(angle);
+end

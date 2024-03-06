@@ -1,0 +1,4 @@
+% Функція для обчислення суми двох чисел
+function result = add(a, b)
+    result = a + b;
+end
