@@ -29,10 +29,10 @@ public class App {
         EdgeOptions options = new EdgeOptions();
         options.addArguments("start-maximized", "--guest");
         WebDriver driver = new EdgeDriver(options);
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
         try {
-            driver.get("https://rozetka.com.ua/ua/");
+            driver.get("https://allo.ua");
 
             WebElement searchInput =
                     wait.until(ExpectedConditions.elementToBeClickable
@@ -41,12 +41,14 @@ public class App {
             searchInput.sendKeys(searchQuery);
             searchInput.sendKeys(Keys.ENTER);
 
-            List<WebElement> pageElements = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector(".goods-tile__content")));
+            List<WebElement> pageElements =
+                    wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy
+                            (By.cssSelector(".product-card__content")));
 
             Map<String, String> pageMap = new LinkedHashMap<>();
             for (WebElement element : pageElements) {
-                WebElement titleElement = element.findElement(By.cssSelector(".goods-tile__title"));
-                WebElement priceElement = element.findElement(By.cssSelector(".goods-tile__price-value"));
+                WebElement titleElement = element.findElement(By.cssSelector(".product-card__title"));
+                WebElement priceElement = element.findElement(By.cssSelector(".v-pb__cur.v-pb__cur"));
 
                 String title = titleElement.getText().trim();
                 String price = priceElement.getText().trim();
