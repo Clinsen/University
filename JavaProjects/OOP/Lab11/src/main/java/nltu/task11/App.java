@@ -1,6 +1,7 @@
 package nltu.task11;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -33,11 +34,12 @@ public class App {
         try {
             driver.get("https://rozetka.com.ua/ua/");
 
-            WebElement searchInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".search-form__input")));
-            searchInput.sendKeys(searchQuery);
+            WebElement searchInput =
+                    wait.until(ExpectedConditions.elementToBeClickable
+                            (By.cssSelector(".search-form__input")));
 
-            WebElement searchSubmitButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(@class, 'search-form__submit')]")));
-            searchSubmitButton.click();
+            searchInput.sendKeys(searchQuery);
+            searchInput.sendKeys(Keys.ENTER);
 
             List<WebElement> pageElements = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector(".goods-tile__content")));
 
@@ -53,6 +55,7 @@ public class App {
             }
 
             printResults(sessionName, pageMap);
+
         } finally {
             driver.manage().deleteAllCookies();
             driver.quit();
